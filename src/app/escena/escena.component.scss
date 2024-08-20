@@ -1,0 +1,66 @@
+
+.card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-style: none;
+    border-color: transparent !important;
+    border-radius: 2rem;    
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #5f5b5b;
+}
+
+.card-img-top {
+    margin-top: 140px;
+    margin-bottom: 140px;
+    width: 18rem;
+}
+
+.card-body {
+    background-color: white;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.btn-arrow-right {
+    margin-left: 0.5rem;
+    height: 2.8rem;
+}
+
+.btn-arrow-left {
+    border: black 1px solid;
+    height: 2.6rem;
+    margin-left: 10.8rem;
+    background-color: white;
+
+}
+
+.bi-arrow-right, .bi-arrow-left {
+    vertical-align: -.125em;
+}
+
+.btn-bolete {
+    padding: 4px;
+    margin-top: 16px;
+    background-color: rgb(221, 219, 219);
+    border-radius: 50%;
+}
+
+.page-item {
+    list-style: none;
+    margin-right: 2.5px;
+}
+
+.btn-bolete.active {
+    background-color: black;
+    height: 0.4rem;
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+

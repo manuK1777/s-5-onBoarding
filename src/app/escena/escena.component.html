@@ -1,7 +1,33 @@
 
-
-<div *ngFor="let step of steps">
-    <h3>{{ step.title }}</h3>
-    <p>{{ step.description }}</p>
-    <!-- ... -->
+<div *ngFor="let step of steps" class="card" style="width: 22rem;" [ngStyle]="{'background-color': step.bgcolor}">
+  <!-- <div class="img-container" [ngStyle]="{'background-color': step.bgcolor}"> -->
+    <img [src]="step.img" class="card-img-top mx-auto d-block" alt="{{ step.title }}">
+  <!-- </div> -->
+  <div class="card-body">
+    <h5 class="card-title mt-3">{{ step.title }}</h5>
+    <p class="card-text mt-3 mb-5">{{ step.description }}</p>
+    <nav aria-label="...">
+      <ul class="pagination">
+         <li class="page-item" aria-current="page">
+          <a class="btn btn-dark btn-bolete btn-sm rounded me-1 float-start active" href="#"></a>
+        </li>
+        <li class="page-item">
+          <a class="btn btn-white btn-bolete btn-sm me-1 float-start" href="#"></a>
+        </li>
+        <li class="page-item">
+          <a class="btn btn-white btn-bolete btn-sm float-start" href="#"></a>
+        </li>
+        <li class="page-item">
+          <a class="btn btn-light btn-arrow-left btn-md rounded-pill mb-4"> <!--disable -->
+           <i class="bi bi-arrow-left"></i>
+         </a>
+       </li>
+        <li class="page-item">
+          <a class="btn btn-dark btn-arrow-right btn-md rounded-pill mb-4" href="#">
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
+</div>
