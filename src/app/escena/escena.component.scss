@@ -1,18 +1,21 @@
+.card-container {
+    margin-top: 32px;
+}
 
 .card {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    width: 16rem;
     border-style: none;
     border-color: transparent !important;
-    border-radius: 2rem;    
+    border-radius: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     color: #5f5b5b;
+    font-size: 0.8rem;
 }
 
 .card-img-top {
-    margin-top: 140px;
-    margin-bottom: 140px;
-    width: 18rem;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 12rem;
 }
 
 .card-body {
@@ -23,24 +26,33 @@
 
 .card-title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: black;
 }
 
 .btn-arrow-right {
-    margin-left: 0.5rem;
-    height: 2.8rem;
+    margin-left: 0.2rem;
+    height: 2.6rem;
+}
+
+.card-body:not(:has(.btn-arrow-left)) .btn-arrow-right {
+    margin-left: 8rem;
+}
+
+.card-body:not(:has(.btn-arrow-right)) .btn-arrow-left {
+    margin-left: 8rem;
 }
 
 .btn-arrow-left {
     border: black 1px solid;
     height: 2.6rem;
-    margin-left: 10.8rem;
+    margin-left: 5rem;
     background-color: white;
 
 }
 
-.bi-arrow-right, .bi-arrow-left {
+.bi-arrow-right,
+.bi-arrow-left {
     vertical-align: -.125em;
 }
 
@@ -49,6 +61,7 @@
     margin-top: 16px;
     background-color: rgb(221, 219, 219);
     border-radius: 50%;
+    border: transparent;
 }
 
 .page-item {
@@ -63,4 +76,3 @@
     padding-left: 8px;
     padding-right: 8px;
 }
-

@@ -12,4 +12,18 @@ import { iStep } from '../interfaces/iStep.interface';
 })
 export class EscenaComponent {
   @Input() steps?: iStep[];
-}
+
+  currentStep: number = 0;
+
+  toNextCard(index: number) {
+    if (index < (this.steps?.length ?? 0)- 1) {
+      this.currentStep = index + 1;
+    }
+  }
+
+  toPrevCard(index: number) {
+    if (index > 0) {
+      this.currentStep = index - 1;
+    }
+  }
+ }
