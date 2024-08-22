@@ -14,7 +14,7 @@
 
 .card-img-top {
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 80px; // just for the first card
     width: 12rem;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .card-body:not(:has(.btn-arrow-left)) .btn-arrow-right {
-    margin-left: 8rem;
+    margin-left: 7.8rem;
 }
 
 .card-body:not(:has(.btn-arrow-right)) .btn-arrow-left {

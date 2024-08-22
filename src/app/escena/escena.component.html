@@ -1,15 +1,16 @@
 
    <div class="card-container">
-     <div *ngFor="let step of steps; let i = index" class="card" [ngStyle]="{'background-color': step.bgcolor, }"> <!-- style="width: 20rem; margin-top: 22px; margin-bottom: 22px" -->
+     <div *ngFor="let step of steps; let i = index" class="card" [ngStyle]="{'background-color': step.bgcolor }"> 
       <div *ngIf="i === currentStep">
-        <img [src]="step.img" class="card-img-top mx-auto d-block" alt="{{ step.title }}">
+        <img [src]="step.img" class="card-img-top mx-auto d-block" alt="{{ step.alt }}" 
+        [ngStyle]="{ 'margin-bottom': i === 1 ? '60px' : i === 2 ? '70px' : '' }"> 
         <div class="card-body">
           <h5 class="card-title mt-3">{{ step.title }}</h5>
           <p class="card-text mt-3 mb-3">{{ step.description }}</p>
           <nav aria-label="...">
             <ul class="pagination">
               <li class="page-item" *ngFor="let step of steps; let i = index">
-                <a class="btn btn-dark btn-bolete btn-sm rounded me-1 float-start"[ngClass]="{'active': i === currentStep}"></a> 
+                <a class="btn btn-dark btn-bolete btn-sm rounded me-1 float-start" (click)="setCurrentStep(i)" [ngClass]="{'active': i === currentStep}"></a> 
               </li>
               <li class="page-item">
                 <a class="btn btn-light btn-arrow-left btn-md rounded-pill mb-2" (click)="toPrevCard(i)" *ngIf="i > 0">

@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { iStep } from '../interfaces/iStep.interface';
+import { RouterModule } from '@angular/router'; 
+
 
 @Component({
   selector: 'app-escena',
@@ -15,6 +17,9 @@ export class EscenaComponent {
 
   currentStep: number = 0;
 
+  setCurrentStep(index: number) {
+    this.currentStep = index;
+  }
   toNextCard(index: number) {
     if (index < (this.steps?.length ?? 0)- 1) {
       this.currentStep = index + 1;
