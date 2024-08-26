@@ -1,27 +1,24 @@
-# OnBoarding
+# Sprint 5 | Onboarding digital
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+## 📄 Descripción
 
-## Development server
+Aplicación para mostrar un onboarding digital. Tenemos tres tarjetas con una imagen y un texto, dos botones: uno para avanzar y pasar a la siguiente tarjeta y otro para retroceder y volver a la anterior. También un indicador de la tarjeta que se está mostrando en pantalla.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 💻 Tecnologías Utilizadas
 
-## Code scaffolding
+- TypeScript
+- HTML, SCSS
+- Bootstrap
+- Angular18
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  
+## 📋 Requisitos 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Node.js y npm instalados.
+- Clonar repositorio
+```bash
+npm install
+```
+```bash
+ng serve -o
+```

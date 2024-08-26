@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { iStep } from '../interfaces/iStep.interface';
-import { RouterModule } from '@angular/router'; 
 
 
 @Component({
@@ -20,15 +19,36 @@ export class EscenaComponent {
   setCurrentStep(index: number) {
     this.currentStep = index;
   }
-  toNextCard(index: number) {
-    if (index < (this.steps?.length ?? 0)- 1) {
-      this.currentStep = index + 1;
+  toNextCard() {
+    if (this.currentStep < (this.steps?.length ?? 0)- 1) {
+      setTimeout(() => {
+        this.currentStep++;
+      },1000)
     }
   }
 
-  toPrevCard(index: number) {
-    if (index > 0) {
-      this.currentStep = index - 1;
+  toPrevCard() {
+    if (this.currentStep > 0) {
+      setTimeout(() => {
+        this.currentStep--;
+      },1000)
     }
   }
+  animateElementRight() {
+    const element = document.querySelectorAll('.card')[this.currentStep]; 
+    element?.classList.add('animateRight');
+    setTimeout(() => {
+      element?.classList.remove('animateRight');
+    },2000)
+  }
+
+  animateElementLeft() {
+    const element = document.querySelectorAll('.card')[this.currentStep]; 
+    element?.classList.add('animateLeft');
+    setTimeout(() => {
+      element?.classList.remove('animateLeft');
+    },2000)
+  }
  }
+
+

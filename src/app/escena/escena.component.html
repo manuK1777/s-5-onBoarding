@@ -1,31 +1,43 @@
 
    <div class="card-container">
-     <div *ngFor="let step of steps; let i = index" class="card" [ngStyle]="{'background-color': step.bgcolor }"> 
+    
+    <div *ngFor="let step of steps; let i = index" class="card" [ngStyle]="{'background-color': step.bgcolor }"> 
       <div *ngIf="i === currentStep">
         <img [src]="step.img" class="card-img-top mx-auto d-block" alt="{{ step.alt }}" 
         [ngStyle]="{ 'margin-bottom': i === 1 ? '60px' : i === 2 ? '70px' : '' }"> 
+       
         <div class="card-body">
           <h5 class="card-title mt-3">{{ step.title }}</h5>
           <p class="card-text mt-3 mb-3">{{ step.description }}</p>
+         
           <nav aria-label="...">
             <ul class="pagination">
+
               <li class="page-item" *ngFor="let step of steps; let i = index">
-                <a class="btn btn-dark btn-bolete btn-sm rounded me-1 float-start" (click)="setCurrentStep(i)" [ngClass]="{'active': i === currentStep}"></a> 
+                <a class="btn btn-dark btn-bolete btn-sm rounded me-1 float-start" 
+                (click)="setCurrentStep(i)" [ngClass]="{'active': i === currentStep }"></a> 
               </li>
+
               <li class="page-item">
-                <a class="btn btn-light btn-arrow-left btn-md rounded-pill mb-2" (click)="toPrevCard(i)" *ngIf="i > 0">
+                <a class="btn btn-light btn-arrow-left btn-md rounded-pill mb-2" (click)="toPrevCard(); animateElementLeft()" *ngIf="i > 0">
                   <i class="bi bi-arrow-left"></i>
                 </a>
               </li>
+
               <li class="page-item">
-                <a class="btn btn-dark btn-arrow-right btn-md rounded-pill mb-2" (click)="toNextCard(i)" *ngIf="steps && i < steps.length - 1">
+                <a class="btn btn-dark btn-arrow-right btn-md rounded-pill mb-2" (click)="toNextCard(); animateElementRight()" 
+                *ngIf="steps && i < steps.length - 1">
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </li>
+
             </ul>
           </nav>
+
         </div>
+
       </div>
+
     </div>
    </div>
 
